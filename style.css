@@ -35,6 +35,7 @@ body {
     grid-auto-flow: column;
     justify-content: center;
     align-content: center;
+    margin-top: 24px;
     margin-bottom: 84px;
 }
 
@@ -52,6 +53,7 @@ body {
     display: grid;
     justify-content: center;
     gap: 24px;
+    padding: 16px 32px;
 }
 
 .menu_link {
@@ -73,19 +75,85 @@ body {
     font-size: 26px;
     font-variation-settings:
     'FILL' 1,
-    'wght' 400,
+    'wght' 600,
     'GRAD' 0,
     'opsz' 80;
 }
 
 header {
     background-color: var(--color-light);
+    padding: 16px 32px;
     grid-column: span 2;
+    display: grid;
+}
+
+.header_top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
+    gap: 84px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 40px 5fr;
+    gap: 16px;
+    place-content: center;
+}
+
+.search_bar {
+    border: none;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+}
+
+.user_info {
+    display: grid;
+    grid-template-columns: 40px 60px 1fr;
+    gap: 18px;
+    place-items: center;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+.profile--small {
+    width: 60px;
+    height: 60px;
+}
+
+.profile--big {
+    width: 80px;
+    height: 80px;
+}
+
+.username {
+    font-weight: 700;
+}
+
+.username--small {
+    display: grid;
+    justify-self: start;
+    font-size: 18px;
+}
+
+.username--big {
+
 }
 
 .content {
     background-color: var(--bg-color);
+    padding: 16px 32px;
     grid-column: span 2;
+}
+
+.btn--icon {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px){
