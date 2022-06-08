@@ -132,6 +132,7 @@ header {
 
 .profile {
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .profile--small {
@@ -169,13 +170,13 @@ header {
     padding: 16px 32px;
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr;
     gap: 36px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
 }
 
@@ -208,6 +209,63 @@ header {
     font-size: 14px;
     font-weight: 500;
     color: var(--text-light);
+}
+
+.card h5 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.card_item p {
+    margin: 0;
+}
+
+.card_item:not(:last-child), .card_usertag:not(:last-child) {
+    border-bottom: 1px var(--bg-color) solid;
+}
+
+.card_item, .card_usertag {
+    padding: 12px 0;
+}
+
+.card_item:first-child, .card_usertag:first-child {
+    padding: 0 0 12px 0;
+}
+
+.card_item:last-child, .card_usertag:last-child {
+    padding: 12px 0 0 0;
+}
+
+.card_usertag {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 24px;
+}
+
+.user_description {
+    display: grid;
+    font-size: 14px;
+}
+
+.tag {
+    font-weight: 600;
+}
+
+.summary {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.text--small {
+    overflow: hidden;
+    font-size: 12px;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
 }
 
 .btn {
@@ -278,9 +336,7 @@ header {
         place-items: center;
         justify-self: end;
     }
-
-}
-
-@media screen and (min-width: 1200px) {
-
+    .content {
+        grid-template-columns: 4fr 1.25fr;
+    }
 }
