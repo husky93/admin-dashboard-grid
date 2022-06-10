@@ -14,14 +14,13 @@
 body {
     margin: 0;
     color: var(--text-color);
-    min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
 
 .main {
     display: grid;
     position: relative;
-    grid-template: 1fr 6fr / 1fr 4fr;
+    grid-template: 200px 4fr / 1fr 4fr;
 }
 
 .sidebar {
@@ -174,6 +173,10 @@ header {
     gap: 36px;
 }
 
+.projects {
+    height: 100%;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -181,6 +184,7 @@ header {
 }
 
 .card {
+    min-height: 225px;
     background-color: var(--color-light);
     padding: 24px;
     display: grid;
@@ -338,5 +342,15 @@ header {
     }
     .content {
         grid-template-columns: 4fr 1.25fr;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .side {
+        display: grid;
+    }
+    
+    .trending {
+        align-self: end;
     }
 }
