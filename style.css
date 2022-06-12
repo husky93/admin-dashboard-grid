@@ -332,6 +332,10 @@ header {
     .sidebar {  
         position: static;
         grid-row: span 2;
+        width: initial;
+        height: initial;
+        left: initial;
+        transition: none;
     }
     header {
         grid-column: 2 / 3;
