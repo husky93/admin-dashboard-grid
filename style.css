@@ -20,7 +20,7 @@ body {
 .main {
     display: grid;
     position: relative;
-    grid-template: 200px 4fr / 1fr 4fr;
+    grid-template: 250px 4fr / 1fr 4fr;
 }
 
 .sidebar {
@@ -173,9 +173,6 @@ header {
     gap: 36px;
 }
 
-.projects {
-    height: 100%;
-}
 
 .container {
     display: grid;
@@ -348,9 +345,6 @@ header {
 @media screen and (min-width:1200px) {
     .side {
         display: grid;
-    }
-    
-    .trending {
-        align-self: end;
+        grid-template-rows: min-content min-content;
     }
 }
